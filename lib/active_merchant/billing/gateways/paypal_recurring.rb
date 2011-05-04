@@ -100,6 +100,7 @@ module ActiveMerchant #:nodoc:
               # xml.tag! 'n2:InvoiceID', 'InvoiceID' + Time.now.to_i.to_s
               
               xml.tag! 'n2:AllowNote', '0'
+              xml.tag! 'n2:LocaleCode', options[:locale] unless options[:locale].blank?
             end
           end
         end
